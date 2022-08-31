@@ -7,23 +7,34 @@
 
 ## **Edit Note**
 ---
-## Configuration.h
-<details><summary>63 : �պA�@��</summary>
-    �֧�F�o���ɮ�
+## Platformio.ini
+<details><summary>
+    16 : 
+    預設環境 mks_robin_e3
+    </summary>
+    <pre>
+        default_envs = mks_robin_e3
+    </pre>
 </details>
-<details><summary>64 : �ϥΫȨ�ƪ����ɮ�</summary>
+
+---
+## Configuration.h
+<details><summary>63 : 組態作者</summary>
+    誰改了這個檔案
+</details>
+<details><summary>64 : 使用客制化版本檔案</summary>
     <pre>#define CUSTOM_VERSION_FILE Version.h</pre>
 </details>
-<details><summary>90 : �D�O���� BOARD_MKS_ROBIN_E3D_V1_1</summary>
+<details><summary>90 : 主板型號 BOARD_MKS_ROBIN_E3D_V1_1</summary>
     <pre>#define MOTHERBOARD BOARD_MKS_ROBIN_E3D_V1_1</pre>
 </details>
-<details><summary>101 : �ǦC�� 1</summary>
+<details><summary>101 : 序列埠 1</summary>
     <pre>#define SERIAL_PORT 1</pre>
 </details>
-<details><summary>137 : �Ȩ�ƾ����W�� "Felix Robin Prusa"</summary>
+<details><summary>137 : 客制化機器名稱 "Felix Robin Prusa"</summary>
     <pre>#define CUSTOM_MACHINE_NAME "Felix Robin Prusa"</pre>
 </details>
-<details><summary>159~ : �X�ʾ����� TMC2209</summary>
+<details><summary>159~ : 驅動器型號 TMC2209</summary>
     <pre>
     #define X_DRIVER_TYPE  TMC2209
     #define Y_DRIVER_TYPE  TMC2209
@@ -31,7 +42,7 @@
     #define E0_DRIVER_TYPE TMC2209
     </pre>
 </details>
-<details><summary>511~ : �ū׷P����  1: EPCOS thermistors</summary>
+<details><summary>511~ : 溫度感測器  1: EPCOS thermistors</summary>
     <pre>
     #define TEMP_SENSOR_0 1
     #define TEMP_SENSOR_BED 1
@@ -43,39 +54,39 @@
 <details>
     <summary>
     <font color="red"><strong>1094</strong></font> : 
-    �̤j�t�� { 600, 600, 30, <font color="red"><strong>40</strong></font> }
+    最大速度 { 600, 600, 30, <font color="red"><strong>40</strong></font> }
     </summary>
     <pre>
-        #��l��
+        #原始值
         #define DEFAULT_MAX_FEEDRATE          { 600, 600, 30, 80 }
     </pre>   
 </details>
 <details><summary> 
     <font color="red"><strong>1107</strong></font> : 
-    �̤j�[�t�� { 3000, 3000, 100, <font color="red"><strong>1000</strong></font> }
+    最大加速度 { 3000, 3000, 100, <font color="red"><strong>1000</strong></font> }
     </summary>
     <pre>#define DEFAULT_MAX_ACCELERATION      { 3000, 3000, 100, 10000 }</pre>
 </details>
-<details><summary>1190~ : Z�k��ϥ�probe</summary>
+<details><summary>1190~ : Z歸位使用probe</summary>
     <pre>
     //#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
     #define USE_PROBE_FOR_Z_HOMING
     </pre>
 </details>   
-<details><summary>1210 : Z�bProbe�}��  PB1</summary>
+<details><summary>1210 : Z軸Probe腳位  PB1</summary>
     <pre>#define Z_MIN_PROBE_PIN PB1</pre>
 </details>
-<details><summary>1320 : Probe���� FIX_MOUNTED_PROBE</summary>
+<details><summary>1320 : Probe型式 FIX_MOUNTED_PROBE</summary>
     <pre>#define FIX_MOUNTED_PROBE</pre>
 </details>
-<details><summary>1529~ : �U�b��V�w�q</summary>
+<details><summary>1529~ : 各軸方向定義</summary>
     <pre>
     #define INVERT_X_DIR true
     #define INVERT_Y_DIR true
     #define INVERT_Z_DIR false
     </pre>
 </details>
-<details><summary>1577~ : �����ɤئT</summary>
+<details><summary>1577~ : 成型床尺吋</summary>
     <pre>
     #define X_BED_SIZE 230
     #define Y_BED_SIZE 210
@@ -84,7 +95,7 @@
 <details>
     <summary>
         <strong><font color="red">1581~</font></strong> : 
-        �k����{�d�� �۹�󭭦쾹��m
+        歸位後行程範圍 相對於限位器位置
     </summary>
     <pre>
     #define X_MIN_POS -10
@@ -98,11 +109,11 @@
 <details>
     <summary>
         <font color=red><strong>1642</strong></font>
-         : �u�ƥκ��˴�   N/A
+         : 線料用盡檢測   N/A
     </summary>
     <pre>#define FILAMENT_RUNOUT_SENSOR</pre>
 </details>
-<details><summary>1742~ : �۰ʼ��ɥ��x�շ� AUTO_BED_LEVELING_BILINEAR </summary>
+<details><summary>1742~ : 自動熱床平台校準 AUTO_BED_LEVELING_BILINEAR </summary>
     <pre>
     //#define AUTO_BED_LEVELING_3POINT
     //#define AUTO_BED_LEVELING_LINEAR
@@ -111,22 +122,22 @@
     //#define MESH_BED_LEVELING
     </pre>
 </details>
-<details><summary>1945 : Z �w���k��, �קKZ�b���ɤ��~�k��</summary>
+<details><summary>1945 : Z 安全歸位, 避免Z在熱床之外歸位</summary>
     <pre>#define Z_SAFE_HOMING</pre>
 </details>
-<details><summary>1953 : �k��t�� : 3000, 3000, 2400</summary>
+<details><summary>1953 : 歸位速度 : 3000, 3000, 2400</summary>
     <pre>#define HOMING_FEEDRATE_MM_M { (50*60), (50*60), (40*60) }</pre>
 </details>
-<details><summary>2030 : �ϥ�EEPROM�s�]�w��</summary>
+<details><summary>2030 : 使用EEPROM存設定值</summary>
     <pre>#define EEPROM_SETTINGS</pre>
 </details>
 <details>
     <summary>
         <strong><font color="red">2036</font></strong> : 
-        ��s��۰ʪ�l��EEPROM</summary>
+        更新後自動初始化EEPROM</summary>
     <pre>#define EEPROM_INIT_NOW</pre>
 </details>
-<details><summary>2065~: PLA�w���Ѽ�</summary>
+<details><summary>2065~: PLA預熱參數</summary>
     <pre>
     #define PREHEAT_1_LABEL       "PLA"
     #define PREHEAT_1_TEMP_HOTEND 185
@@ -135,20 +146,20 @@
     #define PREHEAT_1_FAN_SPEED     0
     </pre>
 </details>
-<details><summary>2087 : �Q�Y�۰ʪy��</summary>
+<details><summary>2087 : 噴頭自動泊位</summary>
 <pre>#define NOZZLE_PARK_FEATURE</pre>
 </details>
 
-<details><summary>2264 : LCD ��ܻy�t zh_TW</summary>
+<details><summary>2264 : LCD 顯示語系 zh_TW</summary>
 <pre>#define LCD_LANGUAGE zh_TW</pre>
 </details>
-<details><summary>2303 : �ҥ�SD�d</summary>
+<details><summary>2303 : 啟用SD卡</summary>
     <pre>#define SDSUPPORT</pre>
 </details>
-<details><summary>2639 : LCD��ܫ̼Ҳ�</summary>
+<details><summary>2639 : LCD顯示屏模組</summary>
 <pre>#define MKS_MINI_12864_V3</pre>
 </details>
-<details><summary>3099 �G �m���Ҧ�</summary>
+<details><summary>3099 ： 彩光模式</summary>
     <pre>
     define NEOPIXEL_LED
     #if ENABLED(NEOPIXEL_LED)
@@ -163,7 +174,7 @@
 
 <details><summary>
     1282 :
-    �ҥ� Probe�����q���F
+    啟用 Probe偏移量精靈
     </summary>
     <pre>
     #define PROBE_OFFSET_WIZARD       
@@ -175,7 +186,7 @@
 
 <details><summary>
     1364 : 
-    �ҥ� LED����\���
+    啟用 LED控制功能表
     </summary>
     <pre>
         #define LED_CONTROL_MENU
@@ -184,14 +195,14 @@
 
 <details><summary>
     2513 : 
-    �ҥ� �i���Ȱ��Ѽ�
+    啟用 進階暫停參數
     </summary>
     <pre>#define ADVANCED_PAUSE_FEATURE</pre>
 </details>
 
 <details><summary>
     2704~
-    : TMC SPI/UART ���F�Ѽ�
+    : TMC SPI/UART 馬達參數
     800mA, 32 microsteps
     </summary>
     <pre>
@@ -248,14 +259,14 @@
 
 <details><summary>
     2997
-    : ���F�i���ͦ����Ѽ� <strong><font color="red">24 V</font></strong>
+    : 馬達波型生成器參數 <strong><font color="red">24 V</font></strong>
     </summary>
     <pre>#define CHOPPER_TIMING  CHOPPER_DEFAULT_24V</pre>
 </details>
 
 <details><summary>
     3091~
-    : �ҥ� �L�P�����k��
+    : 啟用 無感測器歸位
     Sensitivity X:100 Y: 80
     </summary>
     <pre>
@@ -271,7 +282,7 @@
 ## \src\LCD\language_zh_TW.h
 <details><summary>
     218~
-    �G �ץ���ܿ��~
+    ： 修正顯示錯誤
     </summary>
     <pre>
   LSTR MSG_MOVE_X                         = _UxGT("Move X");     // "Move X"
