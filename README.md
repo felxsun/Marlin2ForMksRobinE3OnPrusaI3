@@ -99,6 +99,9 @@
 <details><summary>2030 : 使用EEPROM存設定值</summary>
     <pre>#define EEPROM_SETTINGS</pre>
 </details>
+<details><summary>2036 : 更新後自動初始化EEPROM</summary>
+    <pre>#define EEPROM_INIT_NOW</pre>
+</details>
 <details><summary>2065~: PLA預熱參數</summary>
     <pre>
     #define PREHEAT_1_LABEL       "PLA"
@@ -108,6 +111,20 @@
     #define PREHEAT_1_FAN_SPEED     0
     </pre>
 </details>
-<details><summary>
+<details><summary>2087 : 噴頭自動泊位</summary>
+<pre>#define NOZZLE_PARK_FEATURE</pre>
+</details>
 
-
+<details><summary>2264 : LCD 顯示語系 zh_TW</summary>
+<pre>#define LCD_LANGUAGE zh_TW</pre>
+</details>
+<details><summary>2639 : LCD顯示屏模組</summary>
+<pre>#define MKS_MINI_12864_V3</pre>
+</details>
+<details><summary>3099 ： 彩光模式</summary>
+    <pre>
+    define NEOPIXEL_LED
+    #if ENABLED(NEOPIXEL_LED)
+    #define NEOPIXEL_TYPE          NEO_RGB 
+    </pre>
+</details>
