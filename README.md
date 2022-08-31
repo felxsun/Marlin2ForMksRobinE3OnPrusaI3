@@ -76,7 +76,7 @@
 <details><summary>1210 : Z軸Probe腳位  PB1</summary>
     <pre>#define Z_MIN_PROBE_PIN PB1</pre>
 </details>
-<details><summary>1320 : Probe型式 FIX_MOUNTED_PROBE</summary>
+<details><summary>1230 : Probe型式 FIX_MOUNTED_PROBE</summary>
     <pre>#define FIX_MOUNTED_PROBE</pre>
 </details>
 <details><summary>1529~ : 各軸方向定義</summary>
