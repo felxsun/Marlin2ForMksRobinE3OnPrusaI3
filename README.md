@@ -48,6 +48,15 @@
     #define TEMP_SENSOR_BED 1
     </pre>
 </details>
+<details><summary>790~ : 擠出保護  </summary>
+    <pre>
+    //#define PREVENT_COLD_EXTRUSION
+    #define EXTRUDE_MINTEMP 170
+
+    #define PREVENT_LENGTHY_EXTRUDE
+    #define EXTRUDE_MAXLENGTH 200
+    </pre>
+</details>
 <details><summary>1087 : Steps/mm (200,200,800,283)</summary>
     <pre>#define DEFAULT_AXIS_STEPS_PER_UNIT   { 200, 200, 800, 283 }</pre>
 </details>
