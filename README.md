@@ -48,7 +48,7 @@
     #define TEMP_SENSOR_BED 1
     </pre>
 </details>
-<details><summary>790~ : 擠出保護  </summary>
+<details><summary>779~ : 擠出保護  </summary>
     <pre>
     //#define PREVENT_COLD_EXTRUSION
     #define EXTRUDE_MINTEMP 170
