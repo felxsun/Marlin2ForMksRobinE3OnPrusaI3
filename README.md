@@ -170,7 +170,7 @@
 </details>
 <details><summary>3099 ： 彩光模式</summary>
     <pre>
-    define NEOPIXEL_LED
+    #define NEOPIXEL_LED
     #if ENABLED(NEOPIXEL_LED)
     #define NEOPIXEL_TYPE          NEO_RGB 
     </pre>
@@ -195,10 +195,10 @@
 
 <details><summary>
     1364 : 
-    啟用 LED控制功能表
+    禁用 LED控制功能表
     </summary>
     <pre>
-        #define LED_CONTROL_MENU
+        //#define LED_CONTROL_MENU
     </pre>
 </details>
 
