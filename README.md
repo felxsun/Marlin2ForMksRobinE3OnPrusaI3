@@ -5,7 +5,9 @@
 <br>
 
 
-## **Edit Note**
+## **Edit Note**  
+
+  + 參考 ： [MKS Robin E3D V1.1主板使用说明书](https://blog.csdn.net/gjy_skyblue/article/details/119418639?spm=1001.2014.3001.5501)
 ---
 ## Platformio.ini
 <details><summary>
@@ -299,4 +301,13 @@
   LSTR MSG_MOVE_Z                         = _UxGT("Move Z");     // "Move Z"
   LSTR MSG_MOVE_N                         = _UxGT("Move @");     // "Move @"
     </pre>
+</details>
+
+## \src\gcode\calibrate\G28.cpp
+[MKS Robin E3D V1.1 User manul](https://blog.csdn.net/gjy_skyblue/article/details/119418639?spm=1001.2014.3001.5501)
+<details><summary>
+    591 : 
+    設置校正時自動調用調平數據 
+    </summary>
+    <pre>set_bed_leveling_enabled(true);</pre>
 </details>
